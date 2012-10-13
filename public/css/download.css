@@ -1,0 +1,52 @@
+body {
+    background: #1f1f1f;
+    color: #999999;
+    font-family: "メイリオ";
+    width: 1200px;
+    margin: auto;
+}
+
+a {
+    color: #0099CC;
+}
+
+header {
+    color: #FFCC00;
+    background: #151515;
+    padding: 3px 0 3px 20px;
+}
+
+section {
+    width: 100%;
+    padding-left: 10px;
+}
+
+h1 {
+    color: #0099CC;
+    text-shadow: 1px 1px 3px #000066;
+}
+
+article {
+    margin-bottom: 20px;
+
+}
+
+article h3 {
+    font-size: 105%;
+    margin: 3px 0px 5px 0px;
+    padding: 3px;
+    padding-left: 10px;
+    box-shadow: 1px 1px 3px #000000;
+    box-shadow: -1px -1px 2px #555555;
+    width: 100%;
+    text-shadow: 1px 1px 3px #000;
+    background-color: #222222;
+    color: #339933;
+}
+
+div {
+    color: #3f3f3f;
+    background-color: #EEEEEE;
+    padding: 5px;
+    padding-left: 10px;
+}

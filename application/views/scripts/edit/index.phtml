@@ -1,0 +1,85 @@
+<?php if ($this->id !== null): ?>
+    <h1>しおりを編集する</h1>
+<?php else: ?>
+    <h1>新しくしおりを作る</h1>
+<?php endif; ?>
+
+<form method="post" action="/edit/check">
+
+<article>
+    <h3>旅行のタイトルは？</h3>
+    <p class="error"><?php echo (isset($this->errorList['title']) === true) ? $this->escape($this->errorList['title']):''; ?></p>
+    <div class="detail">
+        <input type="text" id="input_title" name="title" value="<?php echo $this->escape($this->title); ?>" />
+    </div>
+</article>
+
+
+<article>
+    <h3>何しにどこに行くんだい？</h3>
+    <p class="error"><?php echo (isset($this->errorList['thema']) === true) ? $this->escape($this->errorList['thema']):''; ?></p>
+    <div class="detail">
+        <input type="text" id="input_title" name="thema" value="<?php echo $this->escape($this->thema); ?>" />
+    </div>
+</article>
+
+
+<article>
+    <h3>出発日は？</h3>
+    <p class="error"><?php echo (isset($this->errorList['startDate']) === true) ? $this->escape($this->errorList['startDate']):''; ?></p>
+    <div class="detail">
+        <?php foreach($this->dateList as $span => $numbers): ?>
+            <select name="start<?php echo $span; ?>">
+                <?php foreach($numbers as $num): ?>
+                    <?php if($num === (int) $this->startDate[$span]): ?>
+                        <option value="<?php echo $num; ?>" selected="selected"><?php echo $num; ?></option>
+                    <?php else: ?>
+                        <option value="<?php echo $num; ?>"><?php echo $num; ?></option>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+            </select>
+        <?php endforeach; ?>
+    </div>
+</article>
+
+
+<article>
+    <h3>帰着日は？</h3>
+    <p class="error"><?php echo (isset($this->errorList['endDate']) === true) ? $this->escape($this->errorList['endDate']):''; ?></p>
+    <p class="error"><?php echo (isset($this->errorList['startEnd']) === true) ? $this->escape($this->errorList['startEnd']):''; ?></p>
+    <div class="detail">
+        <?php foreach($this->dateList as $span => $numbers): ?>
+            <select name="end<?php echo $span; ?>">
+                <?php foreach($numbers as $num): ?>
+                    <?php if($num === (int) $this->endDate[$span]): ?>
+                        <option value="<?php echo $num; ?>" selected="selected"><?php echo $num; ?></option>
+                    <?php else: ?>
+                        <option value="<?php echo $num; ?>"><?php echo $num; ?></option>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+            </select>
+        <?php endforeach; ?>
+    </div>
+</article>
+
+<article>
+    <h3>誰と行くの？</h3>
+    <div class="detail">
+        <textarea name="member" id="input_member" title="" rows="5"><?php echo $this->escape($this->member); ?></textarea> 
+    </div>
+</article>
+
+<article>
+    <h3>詳細は？</h3>
+    <div class="detail">
+        <textarea name="detail" id="input_detail" title="" rows="10"><?php echo $this->escape($this->detail); ?></textarea>
+    </div>
+</article>
+
+<article>
+    <input type="hidden" name="id" value="<?php echo $this->escape($this->id); ?>" />
+    <input type="submit" name="isCheck" value="確認画面へ" />
+</article>
+
+</form>
+

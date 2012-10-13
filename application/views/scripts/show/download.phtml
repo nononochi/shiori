@@ -1,0 +1,43 @@
+<!DOCTYPE html>  
+<html lang="ja">  
+<head>  
+    <meta charset="utf-8">  
+    <style>
+        <?php echo $this->css; ?>
+    </style>
+    <title><?php echo $this->escape($this->shiori['title']); ?></title>
+</head>  
+<body>
+<header>shiori of trip</header>
+
+<section>
+    <h1><?php echo $this->escape($this->shiori['title']); ?></h1>
+    
+    <article>
+        <h3>テーマ</h3>
+        <div><?php echo $this->escape($this->shiori['thema']); ?></div>
+    </article>
+
+    <article>
+        <h3>旅行期間</h3>
+        <div>
+            <?php echo $this->escape(str_replace('-', '/', $this->shiori['start_date'])); ?>
+            ～
+            <?php echo $this->escape(str_replace('-', '/', $this->shiori['end_date'])); ?>
+        </div>
+    </article>
+
+    <article>
+        <h3>メンバー</h3>
+        <div><?php echo $this->escape($this->shiori['member']); ?></div>
+    </article>
+
+    <article>
+        <h3>詳細</h3>
+        <div><?php echo $this->shiori['detail']; ?></div>
+    </article>
+</section>
+
+</body>  
+</html>
+

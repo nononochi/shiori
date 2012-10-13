@@ -1,0 +1,32 @@
+<h1><?php echo $this->escape($this->shiori['title']); ?></h1>
+
+<form action="/show/download" method="post">
+    <input type="submit" value="このしおりをダウンロードする" />
+    <input type="hidden" name="id" value="<?php echo $this->escape($this->shiori['id']); ?>" />
+</form>
+
+<section>
+    <article>
+        <h3 class="green">テーマ</h3>
+        <div class="detail"><?php echo $this->escape($this->shiori['thema']); ?></div>
+    </article>
+
+    <article>
+        <h3 class="green">旅行期間</h3>
+        <div class="detail">
+            <?php echo $this->escape(str_replace('-', '/', $this->shiori['start_date'])); ?>
+            ～
+            <?php echo $this->escape(str_replace('-', '/', $this->shiori['end_date'])); ?>
+        </div>
+    </article>
+
+    <article>
+        <h3 class="green">メンバー</h3>
+        <div class="detail"><?php echo $this->escape($this->shiori['member']); ?></div>
+    </article>
+
+    <article>
+        <h3 class="green">詳細</h3>
+        <div class="detail"><?php echo $this->shiori['detail']; ?></div>
+    </article>
+</section>

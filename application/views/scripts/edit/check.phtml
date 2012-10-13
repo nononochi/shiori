@@ -1,0 +1,77 @@
+<h1>しおり確認</h1>
+
+<form method="post" action="/edit/update">
+
+<article>
+    <h3>旅行のタイトルは？</h3>
+    <div class="detail"><?php echo $this->escape($this->title); ?></div>
+</article>
+
+
+<article>
+    <h3>何しにどこに行くんだい？</h3>
+    <div class="detail"><?php echo $this->escape($this->thema); ?></div>
+</article>
+
+
+<article>
+    <h3>出発日は？</h3>
+    <div class="detail">
+        <?php echo $this->escape($this->startDate['year']); ?>年
+        <?php echo $this->escape($this->startDate['month']); ?>月
+        <?php echo $this->escape($this->startDate['day']); ?>日
+    </div>
+</article>
+
+
+<article>
+    <h3>帰着日は？</h3>
+    <div class="detail">
+        <?php echo $this->escape($this->endDate['year']); ?>年
+        <?php echo $this->escape($this->endDate['month']); ?>月
+        <?php echo $this->escape($this->endDate['day']); ?>日
+    </div>
+</article>
+
+<article>
+    <h3>誰と行くの？</h3>
+    <div class="detail"><?php echo $this->escape($this->member); ?></div>
+</article>
+
+<article>
+    <h3>詳細は？</h3>
+    <div class="detail"><?php echo nl2br($this->detail); ?></div>
+</article>
+
+<article>
+    <input type="hidden" name="id" value="<?php echo $this->escape($this->id); ?>" />
+    <input type="hidden" name="title" value="<?php echo $this->escape($this->title); ?>" />
+    <input type="hidden" name="thema" value="<?php echo $this->escape($this->thema); ?>" />
+    <input type="hidden" name="startDate[year]" value="<?php echo $this->escape($this->startDate['year']); ?>" />
+    <input type="hidden" name="startDate[month]" value="<?php echo $this->escape($this->startDate['month']); ?>" />
+    <input type="hidden" name="startDate[day]" value="<?php echo $this->escape($this->startDate['day']); ?>" />
+    <input type="hidden" name="endDate[year]" value="<?php echo $this->escape($this->endDate['year']); ?>" />
+    <input type="hidden" name="endDate[month]" value="<?php echo $this->escape($this->endDate['month']); ?>" />
+    <input type="hidden" name="endDate[day]" value="<?php echo $this->escape($this->endDate['day']); ?>" />
+    <input type="hidden" name="member" value="<?php echo $this->escape($this->member); ?>" />
+    <input type="hidden" name="detail" value="<?php echo $this->escape($this->detail); ?>" />
+    <input type="submit" name="isCheck" value="登録する" />
+</article>
+
+</form>
+
+
+<form method="post" action="/edit/check">
+    <input type="hidden" name="id" value="<?php echo $this->escape($this->id); ?>" />
+    <input type="hidden" name="title" value="<?php echo $this->escape($this->title); ?>" />
+    <input type="hidden" name="thema" value="<?php echo $this->escape($this->thema); ?>" />
+    <input type="hidden" name="startyear" value="<?php echo $this->escape($this->startDate['year']); ?>" />
+    <input type="hidden" name="startmonth" value="<?php echo $this->escape($this->startDate['month']); ?>" />
+    <input type="hidden" name="startday" value="<?php echo $this->escape($this->startDate['day']); ?>" />
+    <input type="hidden" name="endyear" value="<?php echo $this->escape($this->endDate['year']); ?>" />
+    <input type="hidden" name="endmonth" value="<?php echo $this->escape($this->endDate['month']); ?>" />
+    <input type="hidden" name="endday" value="<?php echo $this->escape($this->endDate['day']); ?>" />
+    <input type="hidden" name="member" value="<?php echo $this->escape($this->member); ?>" />
+    <input type="hidden" name="detail" value="<?php echo $this->escape($this->detail); ?>" />
+    <input type="submit" name="back" value="修正する" /> 
+</form>

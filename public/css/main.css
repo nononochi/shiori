@@ -1,0 +1,134 @@
+body {
+    background: #1f1f1f;
+    color: #999999;
+    font-family: "メイリオ";
+    width: 1200px;
+    margin: auto;
+}
+
+a {
+    color: #0099CC;
+}
+
+header {
+    color: #FFCC00;
+    background: #151515;
+    padding: 3px 0 3px 20px;
+}
+
+nav {
+    background: #777777;
+    width: 100%;
+    box-shadow: 1px 1px 3px #000;
+    margin-top: 10px;
+    padding: 8px;
+}
+
+nav a {
+    margin: 3px 0px 3px 3px;
+    padding: 5px 30px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#555555), to(#333333));
+    box-shadow: 1px 1px 3px #000;
+}
+
+nav a {
+    color: #888888;
+    text-decoration: none; 
+}
+
+section {
+    width: 100%;
+    padding-left: 10px;
+}
+
+section h1 {
+    color: #0099CC;
+    text-shadow: 1px 1px 3px #000066;
+}
+
+section h2 {
+    color: #0099CC;
+    border-bottom: 2px dotted #999999;
+}
+
+article h3 {
+    font-size: 105%;
+    margin: 3px 0px 5px 0px;
+    padding: 3px;
+    padding-left: 10px;
+    box-shadow: 1px 1px 3px #000000;
+    box-shadow: -1px -1px 2px #555555;
+    width: 100%;
+    text-shadow: 1px 1px 3px #000;
+    background-color: #222222;
+}
+
+article {
+    margin-bottom: 20px;
+
+}
+div.detail {
+    color: #3f3f3f;
+    background-color: #EEEEEE;
+    padding: 5px;
+    padding-left: 10px;
+}
+
+section#download {
+    margin-left: 50px;
+    float: none;
+}
+
+section#download article {
+    padding: 3px;
+    margin: 5px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#333333), to(#1f1f1f));
+    -webkit-box-shadow: 1px 1px 3px #000;
+    margin-bottom: 20px;
+}
+
+#input_title, #input_thema {
+    width: 400px;
+    padding: 5px 2px;
+}
+
+#input_member {
+    width: 400px;
+    height: 100px;
+}
+
+#input_detail {
+    width: 400px;
+    height: 200px;
+}
+
+.green {
+    color: #339933;
+}
+p.error {
+    color: #cc0000;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    background: #333;
+    text-shadow: 1px 1px 3px #000;
+    border-bottom: 1px solid #000;
+}
+
+td {
+    background: #111;
+    border-bottom: 1px dotted #CCC;
+    padding: 3px 5px;
+}
+
+.center {
+    text-align: center;
+}
+
+td a{
+    margin: 0px 5px;
+}
