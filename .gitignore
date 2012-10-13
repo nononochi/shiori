@@ -1,3 +1,7 @@
 nbproject/
 conf/
 system.conf
+.zfproject.xml
+tests/
+migrate/
+.*
